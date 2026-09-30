@@ -16,12 +16,25 @@ body {
     box-sizing: border-box;
 }
 
-/* --- メイン画面の要素 --- */
 #timer {
+    position: fixed; /* 画面の一番上に固定 */
+    top: 0;
+    left: 0;
+    width: 100%; /* 横幅いっぱいにする */
+    background-color: #222; /* タイマーの背景を暗くして目立たせる（お好みで変更可） */
+    color: green;
     font-size: 40px;
     font-weight: bold;
-    color: red;
-    margin-bottom: 20px;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+    z-index: 1000; /* 画像やボタンより常に手前に表示させる */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* 下に少し影をつけてヘッダーっぽくする */
+}
+
+/* タイマーが固定された分、下の問題画像が隠れないように上部に余白を設ける */
+#main-screen {
+    padding-top: 90px; 
 }
 
 .image-container {
