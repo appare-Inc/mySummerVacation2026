@@ -58,7 +58,7 @@ body {
     width: 1%;
     height: 2.5%;
     /* 開発中は、以下の背景色をつけると位置調整がしやすいです */ 
-    background-color: rgba(255, 0, 0, 0.5); 
+    background-color: rgba(255, 0, 0, 0); 
 }
 
 /* ボタン群のスタイル */
@@ -91,4 +91,9 @@ body {
     color: #fff;
     border: none;
     border-radius: 10px;
+}
+
+/* ボタンとリンク（透明な当たり判定）にカーソルを乗せても指マークにしない */
+button, a {
+    cursor: default !important;
 }
