@@ -1,16 +1,19 @@
 body {
     background-color: #FCE1FF;
     margin: 0; /* 余白をリセット */
-    height: 100vh; /* 画面全体の高さを持たせる */
+    /* height: 100vh; 画面全体の高さを持たせる */
 }
 
 /* 画面のコンテナ（中央揃え） */
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; を削除（上部が切れるのを防ぐため） */
     align-items: center;
-    height: 100%; /* 親要素(body)の高さに合わせる */
+    /* height: 100%; を min-height に変更し、上下に余白を追加 */
+    min-height: 100vh; 
+    padding: 20px 0; 
+    box-sizing: border-box;
 }
 
 /* --- メイン画面の要素 --- */
