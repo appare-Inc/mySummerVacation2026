@@ -1,63 +1,78 @@
-body{
+body {
     background-color: #FCE1FF;
+    margin: 0; /* 余白をリセット */
+    height: 100vh; /* 画面全体の高さを持たせる */
+}
+
+/* 画面のコンテナ（中央揃え） */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* 親要素(body)の高さに合わせる */
+}
+
+/* --- メイン画面の要素 --- */
+#timer {
+    font-size: 40px;
+    font-weight: bold;
+    color: red;
+    margin-bottom: 20px;
 }
 
 .image-container {
-  position: relative;
-  display: inline-block; /* 画像のサイズにフィットさせる */
-  width: 75%;           /* スマホ対応：画面に合わせて伸縮 */
+    position: relative;
+    display: inline-block;
+    width: 75%;
 }
 
 .image-container img {
-  width: 100%;
-  height: auto;
-  display: block;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-/* 2. 透明な当たり判定（リンク） */
+/* 透明な当たり判定（リンク） */
 .white-btn {
-  position: absolute;
-  border-radius: 100%;
-  
-  /* 位置とサイズを「％」で指定する（ここがポイント！） */
-  top: 87.8%;     /* 上から 20% の位置 */
-  left: 86.4%;    /* 左から 30% の位置 */
-  width: 1%;   /* ボタンの横幅を画像全体の 25% に */
-  height: 2.5%;  /* ボタンの縦幅を画像全体の 40% に */
-  
-  /* 開発中は、以下の背景色をつけると位置調整がしやすいです */ 
-  background-color: rgba(255, 0, 0);
+    position: absolute;
+    border-radius: 100%;
+    top: 87.2%;
+    left: 87.1%;
+    width: 1%;
+    height: 2.5%;
+    /* 開発中は、以下の背景色をつけると位置調整がしやすいです */ 
+    background-color: rgba(255, 0, 0, 0.5); 
 }
 
-.btn{
+/* ボタン群のスタイル */
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin-top: 20px;
+}
+
+.btn {
     width: 100px;
     height: 100px;
     border-radius: 100%;
     border-color: black;
     border-width: 5pt;
+    cursor: pointer; /* クリックできることを分かりやすく */
 }
 
-.red{
-    background-color: red;
-}
+.red { background-color: red; }
+.blue { background-color: blue; }
+.green { background-color: green; }
 
-.blue{
-    background-color: blue;
-}
-
-.green{
-    background-color: green;
-}
-
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.buttons{
-    display: flex;
-    justify-content: space-around;
-    width: 90%;
+/* スタート画面のボタン */
+#start-btn {
+    font-size: 24px;
+    padding: 15px 40px;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
 }

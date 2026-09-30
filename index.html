@@ -7,15 +7,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <!-- 1. スタート画面 -->
+    <div id="start-screen" class="container">
+        <h1>爆弾解除ミッション</h1>
+        <p>制限時間は3分間です。</p>
+        <button id="start-btn">スタート</button>
+    </div>
+
+    <!-- 2. メイン画面（初期状態では非表示） -->
+    <div id="main-screen" class="container" style="display: none;">
+        <!-- タイマー表示 -->
+        <div id="timer">03:00</div>
 
         <div>
-            <p><font size="6">が表す2つの色のボタンを押せば、爆弾は解除される。</font></p>
+            <img class="question-picture" src="question.png" alt="問題の写真">
         </div>
 
         <div class="image-container">
             <img class="doc-picture" src="doc.png" alt="博士の写真">
-            <a class="white-btn"></a>
+            <a href="#" class="white-btn"></a>
         </div>
 
         <div class="buttons">
@@ -23,7 +33,13 @@
             <button type="button" class="blue btn"></button>
             <button type="button" class="green btn"></button>
         </div>
-        
     </div>
+
+    <!-- 3. 結果画面（初期状態では非表示） -->
+    <div id="result-screen" class="container" style="display: none;">
+        <img id="result-image" src="" alt="結果">
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
